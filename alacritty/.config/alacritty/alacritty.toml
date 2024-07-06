@@ -22,5 +22,5 @@ mods = "Control"
 
 [window]
 decorations = "None"
-opacity = 0.9
+opacity = 0.8
 startup_mode = "Maximized"
