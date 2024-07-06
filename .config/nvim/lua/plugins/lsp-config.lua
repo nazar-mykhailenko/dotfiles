@@ -17,6 +17,9 @@ return {
 		lspconfig.omnisharp.setup({
 			capabilities = capabilities,
 		})
+		lspconfig.clangd.setup({
+			capabilities = capabilities,
+		})
 		lspconfig.angularls.setup({
 			capabilities = capabilities,
 		})
