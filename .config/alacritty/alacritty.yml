@@ -1,0 +1,9 @@
+window:
+  opacity: 0.9
+  startup_mode: "Maximized"
+  decorations: "None"
+font:
+  size: 16
+  normal:
+    family: "CaskaydiaMonoNerdFont"
+    style: "Regular"
