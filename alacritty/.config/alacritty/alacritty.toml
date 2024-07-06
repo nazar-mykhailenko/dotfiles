@@ -1,0 +1,26 @@
+[font]
+size = 16
+
+[font.normal]
+family = "CaskaydiaMonoNerdFont"
+style = "Regular"
+
+[[keyboard.bindings]]
+chars = "\u001BF"
+key = "W"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u001BB"
+key = "B"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u001B\u007F"
+key = "Back"
+mods = "Control"
+
+[window]
+decorations = "None"
+opacity = 0.9
+startup_mode = "Maximized"
