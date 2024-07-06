@@ -54,7 +54,7 @@ return {
 		vim.keymap.set("n", "<F12>", function()
 			dap.step_out()
 		end)
-		vim.keymap.set("n", "<Leader>b", function()
+		vim.keymap.set("n", "<Leader>tb", function()
 			dap.toggle_breakpoint()
 		end, { desc = "Toggle [B]reakpoint" })
 		vim.keymap.set({ "n", "v" }, "<Leader>dh", function()
