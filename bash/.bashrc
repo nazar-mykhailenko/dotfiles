@@ -132,3 +132,9 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+exec fortune | cowsay -f hellokitty
+
+alias clear="clear && fortune | cowsay -f hellokitty "
+alias create-sqlserver='sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=p@ssword1"    -p 1433:1433 --name sql_server --hostname sql1 -v sqlserver:/var/opt/mssql/data --user=root   -d    mcr.microsoft.com/mssql/server:2022-latest'
+alias run-sqlserver="docker start sql_server"
+alias stop-sqlserver="docker stop sql_server"
