@@ -11,6 +11,8 @@ return {
 		vim.keymap.set("n", "<leader>sh", builtins.help_tags, { desc = "[S]earch [H]elp" })
 		vim.keymap.set("n", "<leader>sk", builtins.keymaps, { desc = "[S]earch [K]eymaps" })
 		vim.keymap.set("n", "<leader><leader>", builtins.buffers, { desc = "[ ] Find existing buffers" })
+		vim.keymap.set("n", "<leader>lg", builtins.live_grep, { desc = "[L]ive [G]rep"})
+		vim.keymap.set("n", "<leader>gs", builtins.grep_string, { desc = "[G]rep [S]tring"})
 	end
 }
 
