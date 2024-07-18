@@ -8,7 +8,19 @@ return {
 	config = function()
 		require("mason").setup()
 		require("mason-lspconfig").setup({
-			ensure_installed = { "omnisharp", "angularls", "tsserver", "lua_ls" },
+			ensure_installed = {
+				"omnisharp",
+				"angularls",
+				"tsserver",
+				"lua_ls",
+				"stylua",
+				"prettier",
+				"csharpier",
+				"clangd",
+				"emmet_language_server",
+				"html",
+				"cssls"
+			},
 		})
 
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -20,9 +32,9 @@ return {
 		lspconfig.clangd.setup({
 			capabilities = capabilities,
 		})
-		lspconfig.angularls.setup({
-			capabilities = capabilities,
-		})
+		-- lspconfig.angularls.setup({
+		-- 	capabilities = capabilities,
+		-- })
 		lspconfig.tsserver.setup({
 			capabilities = capabilities,
 		})
@@ -30,13 +42,22 @@ return {
 			capabilities = capabilities,
 		})
 		lspconfig.html.setup({
-			capabilities = capabilities
+			capabilities = capabilities,
 		})
 		lspconfig.cssls.setup({
-			capabilities = capabilities
+			capabilities = capabilities,
 		})
 		lspconfig.pyright.setup({
-			capabilities = capabilities
+			capabilities = capabilities,
+		})
+		lspconfig.html.setup({
+			capabilities = capabilities,
+		})
+		lspconfig.cssls.setup({
+			capabilities = capabilities,
+		})
+		lspconfig.emmet_language_server.setup({
+			capabilities = capabilities,
 		})
 		vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "[E]rrors" })
 		vim.keymap.set("n", "<leader>q", vim.lsp.buf.code_action, { desc = "[Q]uick actions" })
