@@ -6,16 +6,6 @@ family = "FiraCode Nerd Font Propo"
 style = "Regular"
 
 [[keyboard.bindings]]
-chars = "\u001BF"
-key = "W"
-mods = "Control"
-
-[[keyboard.bindings]]
-chars = "\u001BB"
-key = "B"
-mods = "Control"
-
-[[keyboard.bindings]]
 chars = "\u001B\u007F"
 key = "Back"
 mods = "Control"
