@@ -55,6 +55,16 @@ return {
 		lspconfig.omnisharp.setup({
 			capabilities = capabilities,
 			on_attach = onAttach,
+			settings = {
+				FormattingOptions = {
+					EnableEditorConfigSupport = true,
+					OrganizeImports = true,
+				},
+				RoslynExtensionsOptions = {
+					EnableAnalyzersSupport = true,
+					EnableImportCompletion = true,
+				},
+			},
 		})
 		lspconfig.dockerls.setup({
 			capabilities = capabilities,
