@@ -34,7 +34,7 @@ return {
 			ensure_installed = {
 				"omnisharp",
 				"angularls",
-				"tsserver",
+				"ts_ls",
 				"lua_ls",
 				"stylua",
 				"prettier",
@@ -45,14 +45,12 @@ return {
 				"cssls",
 				"dockerls",
 				"docker_compose_language_service",
-				"eslint_d",
 			},
 		})
 
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
-		local lspconfig = require("lspconfig")
 
-		lspconfig.omnisharp.setup({
+		vim.lsp.config('omnisharp', {
 			capabilities = capabilities,
 			on_attach = onAttach,
 			settings = {
@@ -66,53 +64,73 @@ return {
 				},
 			},
 		})
-		lspconfig.dockerls.setup({
+		vim.lsp.enable('omnisharp')
+		vim.lsp.config('dockerls',{
 			capabilities = capabilities,
 			on_attach = onAttach,
 		})
-		lspconfig.docker_compose_language_service.setup({
+		vim.lsp.enable('dockerls')
+		vim.lsp.config('docker_compose_language_service',{
 			capabilities = capabilities,
 			on_attach = onAttach,
 		})
-		lspconfig.clangd.setup({
+		vim.lsp.enable('docker_compose_language_service')
+		vim.lsp.config('clangd',{
 			capabilities = capabilities,
 			on_attach = onAttach,
 		})
-		lspconfig.angularls.setup({
+		vim.lsp.enable('clangd')
+		vim.lsp.config('angularls',{
 			capabilities = capabilities,
 			on_attach = onAttach,
 		})
-		lspconfig.tsserver.setup({
+		vim.lsp.enable('angularls')
+		vim.lsp.config('ts_ls',{
 			capabilities = capabilities,
 			on_attach = onAttach,
 		})
-		lspconfig.lua_ls.setup({
+		vim.lsp.enable('ts_ls')
+		vim.lsp.config('lua_ls',{
 			capabilities = capabilities,
 			on_attach = onAttach,
 		})
-		lspconfig.html.setup({
+		vim.lsp.enable('lua_ls')
+		vim.lsp.config('html',{
 			capabilities = capabilities,
 			on_attach = onAttach,
 		})
-		lspconfig.cssls.setup({
+		vim.lsp.enable('html')
+		vim.lsp.config('cssls',{
 			capabilities = capabilities,
 			on_attach = onAttach,
 		})
-		lspconfig.pyright.setup({
+		vim.lsp.enable('cssls')
+		vim.lsp.config('pyright',{
 			capabilities = capabilities,
 			on_attach = onAttach,
 		})
-		lspconfig.html.setup({
+		vim.lsp.enable('pyright')
+		vim.lsp.config('html',{
 			capabilities = capabilities,
 			on_attach = onAttach,
 		})
-		lspconfig.cssls.setup({
+		vim.lsp.enable('html')
+		vim.lsp.config('cssls',{
 			capabilities = capabilities,
 			on_attach = onAttach,
 		})
-		lspconfig.emmet_language_server.setup({
+		vim.lsp.enable('cssls')
+		vim.lsp.config('emmet_language_server',{
 			capabilities = capabilities,
 			on_attach = onAttach,
 		})
+		vim.lsp.enable('emmet_language_server')
+		vim.lsp.config("racket_langserver", {
+			-- cmd = { 'racket', '-l', 'racket-langserver'},
+			-- filetypes = { 'rkt' },
+			capabilities = capabilities,
+			on_attach = onAttach,
+		})
+		vim.lsp.enable("racket_langserver")
 	end,
 }
