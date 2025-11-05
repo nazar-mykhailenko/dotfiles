@@ -18,6 +18,7 @@ opt.splitbelow = true
 opt.scrolloff = 10
 opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+vim.diagnostic.config({ virtual_text = true })
 
 local remove_whitespace_group = vim.api.nvim_create_augroup("remove_whitespace", { clear = true })vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*",
