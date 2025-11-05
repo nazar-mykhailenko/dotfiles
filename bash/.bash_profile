@@ -1,18 +1,13 @@
+# .bash_profile
 
-if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
-    fi
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
 fi
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
+# User specific environment and startup programs
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
+
+# Added by Toolbox App
+export PATH="$PATH:/home/nazarm/.local/share/JetBrains/Toolbox/scripts"
 
